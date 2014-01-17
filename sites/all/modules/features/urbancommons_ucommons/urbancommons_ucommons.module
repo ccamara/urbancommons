@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Urbancommons UCommons feature.
+ */
+
+include_once 'urbancommons_ucommons.features.inc';
