@@ -22,7 +22,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -82,7 +82,7 @@ function urbancommons_ucommons_field_default_field_instances() {
           'use_widget_handlers' => 1,
         ),
         'type' => 'addressfield_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -116,6 +116,85 @@ function urbancommons_ucommons_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-urbancommon-field_ucommons_beneficiaries'
+  $field_instances['node-urbancommon-field_ucommons_beneficiaries'] = array(
+    'bundle' => 'urbancommon',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_ucommons_beneficiaries',
+    'label' => 'Beneficiaries',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
+      'weight' => 8,
+    ),
+  );
+
+  // Exported field_instance: 'node-urbancommon-field_ucommons_category'
+  $field_instances['node-urbancommon-field_ucommons_category'] = array(
+    'bundle' => 'urbancommon',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 7,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_ucommons_category',
+    'label' => 'Category',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => 0,
+      ),
+      'type' => 'options_select',
+      'weight' => 9,
+    ),
+  );
+
   // Exported field_instance: 'node-urbancommon-field_ucommons_highlighted_media'
   $field_instances['node-urbancommon-field_ucommons_highlighted_media'] = array(
     'bundle' => 'urbancommon',
@@ -123,11 +202,13 @@ function urbancommons_ucommons_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'file',
-        'settings' => array(),
-        'type' => 'file_default',
-        'weight' => 5,
+        'label' => 'hidden',
+        'module' => 'file_entity',
+        'settings' => array(
+          'file_view_mode' => 'default',
+        ),
+        'type' => 'file_rendered',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -178,13 +259,14 @@ function urbancommons_ucommons_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'geofield',
         'settings' => array(
           'data' => 'full',
+          'map_preset' => 'geofield_formatter_map',
         ),
-        'type' => 'geofield_wkt',
-        'weight' => 6,
+        'type' => 'geofield_openlayers',
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -241,11 +323,13 @@ function urbancommons_ucommons_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'file',
-        'settings' => array(),
-        'type' => 'file_default',
-        'weight' => 8,
+        'label' => 'hidden',
+        'module' => 'file_entity',
+        'settings' => array(
+          'file_view_mode' => 'default',
+        ),
+        'type' => 'file_rendered',
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -299,7 +383,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'module' => 'relation_add',
         'settings' => array(),
         'type' => 'relation_add_endpoints_and_fields',
-        'weight' => 7,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -332,14 +416,57 @@ function urbancommons_ucommons_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-urbancommon-field_ucommons_tags'
+  $field_instances['node-urbancommon-field_ucommons_tags'] = array(
+    'bundle' => 'urbancommon',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 8,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_ucommons_tags',
+    'label' => 'Tags',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
+      'weight' => 10,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Address');
+  t('Beneficiaries');
   t('Body');
+  t('Category');
   t('Highlighted Media');
   t('Location');
   t('Media');
   t('Related');
+  t('Tags');
 
   return $field_instances;
 }
