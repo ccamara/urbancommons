@@ -8,6 +8,7 @@ dependencies[] = chosen
 dependencies[] = ckeditor
 dependencies[] = diff
 dependencies[] = features
+dependencies[] = link
 dependencies[] = media_flickr
 dependencies[] = media_internet
 dependencies[] = media_vimeo
