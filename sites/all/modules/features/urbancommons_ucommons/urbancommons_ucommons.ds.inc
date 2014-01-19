@@ -56,6 +56,8 @@ function urbancommons_ucommons_ds_layout_settings_info() {
         7 => 'field_ucommons_beneficiaries',
         8 => 'field_ucommons_tags',
         9 => 'field_ucommons_related',
+        10 => 'field_ucommons_area_effect',
+        11 => 'field_ucommons_promoter',
       ),
     ),
     'fields' => array(
@@ -69,6 +71,8 @@ function urbancommons_ucommons_ds_layout_settings_info() {
       'field_ucommons_beneficiaries' => 'right',
       'field_ucommons_tags' => 'right',
       'field_ucommons_related' => 'right',
+      'field_ucommons_area_effect' => 'right',
+      'field_ucommons_promoter' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(

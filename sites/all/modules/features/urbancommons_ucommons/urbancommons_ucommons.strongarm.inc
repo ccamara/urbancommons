@@ -712,7 +712,7 @@ function urbancommons_ucommons_strongarm() {
     ),
     'field_ucommons_tags' => array(
       'region' => 'right',
-      'weight' => '4',
+      'weight' => '5',
       'has_required' => FALSE,
       'title' => 'Tags',
       'hidden' => 0,
@@ -743,6 +743,13 @@ function urbancommons_ucommons_strongarm() {
       'weight' => '2',
       'has_required' => FALSE,
       'title' => 'Area of effect',
+      'hidden' => 0,
+    ),
+    'field_ucommons_promoter' => array(
+      'region' => 'right',
+      'weight' => '4',
+      'has_required' => FALSE,
+      'title' => 'Promoter',
       'hidden' => 0,
     ),
   );
