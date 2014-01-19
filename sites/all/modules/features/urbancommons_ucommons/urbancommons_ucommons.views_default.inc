@@ -177,8 +177,6 @@ function urbancommons_ucommons_views_default_views() {
     'OpenWeatherMap.Temperature' => 0,
     'OpenWeatherMap.Snow' => 0,
   );
-  $handler->display->display_options['style_options']['node_map_marker'] = 'webiconset-pins-24 pin3';
-  $handler->display->display_options['style_options']['term_map_marker'] = 'webiconset-pins-24 pin3';
   $handler->display->display_options['style_options']['fullscreen'] = 1;
   $handler->display->display_options['style_options']['category_method'] = '0';
   $handler->display->display_options['style_options']['category_term_reference_field'] = 'field_tags';
