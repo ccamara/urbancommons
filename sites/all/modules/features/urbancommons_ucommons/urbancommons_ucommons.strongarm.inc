@@ -782,6 +782,41 @@ function urbancommons_ucommons_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_urbancommon_ca_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_urbancommon_ca_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_urbancommon_en_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_urbancommon_en_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_urbancommon_es_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_urbancommon_es_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_urbancommon_pattern';
+  $strongarm->value = 'commons/[node:title]';
+  $export['pathauto_node_urbancommon_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_urbancommon_und_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_urbancommon_und_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'save_continue_urbancommon';
   $strongarm->value = 'Save and add fields';
   $export['save_continue_urbancommon'] = $strongarm;
