@@ -8,6 +8,9 @@
  * Implements hook_ctools_plugin_api().
  */
 function urbancommons_ucommons_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "ds" && $api == "ds") {
+    return array("version" => "1");
+  }
   if ($module == "openlayers" && $api == "openlayers_maps") {
     return array("version" => "1");
   }

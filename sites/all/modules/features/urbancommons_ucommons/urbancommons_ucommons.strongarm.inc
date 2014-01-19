@@ -124,7 +124,7 @@ function urbancommons_ucommons_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '13',
+          'weight' => '14',
         ),
         'language' => array(
           'weight' => '1',
@@ -134,6 +134,19 @@ function urbancommons_ucommons_strongarm() {
     ),
   );
   $export['field_bundle_settings_node__urbancommon'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_relation__related_urbancommon';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_relation__related_urbancommon'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -626,6 +639,118 @@ function urbancommons_ucommons_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'nodeformscols_field_placements_urbancommon_default';
+  $strongarm->value = array(
+    'title' => array(
+      'region' => 'main',
+      'weight' => '0',
+      'has_required' => TRUE,
+      'title' => 'Title',
+    ),
+    'additional_settings' => array(
+      'region' => 'footer',
+      'weight' => '0',
+      'has_required' => FALSE,
+      'title' => 'Vertical tabs',
+      'hidden' => 0,
+    ),
+    'actions' => array(
+      'region' => 'footer',
+      'weight' => '1',
+      'has_required' => FALSE,
+      'title' => 'Save',
+      'hidden' => 0,
+    ),
+    'language' => array(
+      'region' => 'main',
+      'weight' => '1',
+      'has_required' => FALSE,
+      'title' => 'Language',
+      'hidden' => 0,
+    ),
+    'body' => array(
+      'region' => 'main',
+      'weight' => '3',
+      'has_required' => FALSE,
+      'title' => 'Body',
+      'hidden' => 0,
+    ),
+    'field_ucommons_highlighted_media' => array(
+      'region' => 'main',
+      'weight' => '2',
+      'has_required' => FALSE,
+      'title' => 'Highlighted Media',
+      'hidden' => 0,
+    ),
+    'field_ucommons_related' => array(
+      'region' => 'main',
+      'weight' => '6',
+      'has_required' => FALSE,
+      'title' => 'Related',
+      'hidden' => 0,
+    ),
+    'field_ucommons_media' => array(
+      'region' => 'main',
+      'weight' => '5',
+      'has_required' => FALSE,
+      'title' => 'Media',
+      'hidden' => 0,
+    ),
+    'field_ucommons_beneficiaries' => array(
+      'region' => 'right',
+      'weight' => '3',
+      'has_required' => FALSE,
+      'title' => 'Beneficiaries',
+      'hidden' => 0,
+    ),
+    'field_ucommons_category' => array(
+      'region' => 'right',
+      'weight' => '1',
+      'has_required' => FALSE,
+      'title' => 'Category',
+      'hidden' => 0,
+    ),
+    'field_ucommons_tags' => array(
+      'region' => 'right',
+      'weight' => '4',
+      'has_required' => FALSE,
+      'title' => 'Tags',
+      'hidden' => 0,
+    ),
+    'field_link' => array(
+      'region' => 'right',
+      'weight' => '0',
+      'has_required' => FALSE,
+      'title' => 'Link',
+      'hidden' => 0,
+    ),
+    'field_ucommons_location' => array(
+      'region' => 'main',
+      'weight' => '4',
+      'has_required' => FALSE,
+      'title' => 'Location',
+      'hidden' => 0,
+    ),
+    'field_ucommons_leaflet_map' => array(
+      'region' => 'main',
+      'weight' => '7',
+      'has_required' => FALSE,
+      'title' => 'Leaflet map',
+      'hidden' => 1,
+    ),
+    'field_ucommons_area_effect' => array(
+      'region' => 'right',
+      'weight' => '2',
+      'has_required' => FALSE,
+      'title' => 'Area of effect',
+      'hidden' => 0,
+    ),
+  );
+  $export['nodeformscols_field_placements_urbancommon_default'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_options_urbancommon';
   $strongarm->value = array(
     0 => 'status',
@@ -646,6 +771,13 @@ function urbancommons_ucommons_strongarm() {
   $strongarm->name = 'node_submitted_urbancommon';
   $strongarm->value = 1;
   $export['node_submitted_urbancommon'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'save_continue_urbancommon';
+  $strongarm->value = 'Save and add fields';
+  $export['save_continue_urbancommon'] = $strongarm;
 
   return $export;
 }
