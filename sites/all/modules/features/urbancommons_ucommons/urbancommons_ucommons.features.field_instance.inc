@@ -68,7 +68,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_url',
-        'weight' => 5,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -123,7 +123,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 19,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -163,7 +163,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 7,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -204,7 +204,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 6,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'inline',
@@ -920,7 +920,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 20,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1059,7 +1059,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 20,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1100,7 +1100,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 22,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1139,7 +1139,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'module' => 'relation_add',
         'settings' => array(),
         'type' => 'relation_add_endpoints_and_fields',
-        'weight' => 9,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1163,7 +1163,7 @@ function urbancommons_ucommons_field_default_field_instances() {
       'active' => 1,
       'module' => 'relation_add',
       'settings' => array(
-        'relation_endpoint_custom_label' => 'Related',
+        'relation_endpoint_custom_label' => '',
         'relation_endpoint_label' => 'custom',
         'relation_endpoint_label_delta' => 0,
         'relation_endpoint_search_by_id' => 1,
@@ -1185,7 +1185,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 8,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
