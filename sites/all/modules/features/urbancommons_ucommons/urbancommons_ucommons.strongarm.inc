@@ -124,7 +124,7 @@ function urbancommons_ucommons_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '12',
+          'weight' => '13',
         ),
         'language' => array(
           'weight' => '1',
