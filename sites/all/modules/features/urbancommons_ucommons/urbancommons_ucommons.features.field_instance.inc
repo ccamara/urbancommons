@@ -50,7 +50,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 3,
+      'weight' => 2,
     ),
   );
 
@@ -104,7 +104,7 @@ function urbancommons_ucommons_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 1,
+      'weight' => 5,
     ),
   );
 
@@ -144,7 +144,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 8,
+      'weight' => 7,
     ),
   );
 
@@ -184,7 +184,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'apply_chosen' => 0,
       ),
       'type' => 'options_select',
-      'weight' => 9,
+      'weight' => 6,
     ),
   );
 
@@ -243,7 +243,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 2,
+      'weight' => 1,
     ),
   );
 
@@ -604,7 +604,7 @@ function urbancommons_ucommons_field_default_field_instances() {
       'module' => 'getlocations_leaflet',
       'settings' => array(),
       'type' => 'getlocations_leaflet_map',
-      'weight' => 11,
+      'weight' => 10,
     ),
   );
 
@@ -640,7 +640,7 @@ function urbancommons_ucommons_field_default_field_instances() {
           'baselayers' => array(
             'Hybrid' => 1,
             'Map' => 1,
-            'OpenStreetMap' => 0,
+            'OpenStreetMap' => 1,
             'Physical' => 1,
             'Satellite' => 1,
           ),
@@ -681,7 +681,7 @@ function urbancommons_ucommons_field_default_field_instances() {
           'input_country_required' => 0,
           'input_country_weight' => 0,
           'input_country_width' => 40,
-          'input_fax_required' => 0,
+          'input_fax_required' => 4,
           'input_fax_weight' => 0,
           'input_fax_width' => 20,
           'input_geobutton_weight' => 0,
@@ -690,7 +690,7 @@ function urbancommons_ucommons_field_default_field_instances() {
           'input_latitude_width' => 20,
           'input_longitude_weight' => 0,
           'input_longitude_width' => 20,
-          'input_map_marker' => 'treasure',
+          'input_map_marker' => 'webiconset-pins-24 pin2',
           'input_map_show' => 1,
           'input_map_weight' => 0,
           'input_marker_weight' => 0,
@@ -730,8 +730,8 @@ function urbancommons_ucommons_field_default_field_instances() {
           'map_settings_allow' => 0,
           'mapcontrolposition' => '',
           'mapheight' => '200px',
-          'maptype' => 'Map',
-          'mapwidth' => '80%',
+          'maptype' => 'OpenStreetMap',
+          'mapwidth' => '90%',
           'maxzoom_map' => -1,
           'minzoom_map' => -1,
           'mtc' => 'standard',
@@ -742,7 +742,7 @@ function urbancommons_ucommons_field_default_field_instances() {
           'only_countries' => '',
           'overview' => 0,
           'overview_opened' => 0,
-          'pancontrol' => 1,
+          'pancontrol' => 0,
           'pancontrolposition' => '',
           'per_item_marker' => 0,
           'polygons_clickable' => 0,
@@ -889,7 +889,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'use_country_dropdown' => 1,
       ),
       'type' => 'getlocations_fields',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -945,7 +945,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 6,
+      'weight' => 4,
     ),
   );
 
@@ -989,7 +989,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'relation_endpoint_search_by_id' => 1,
       ),
       'type' => 'relation_add',
-      'weight' => 5,
+      'weight' => 9,
     ),
   );
 
@@ -1029,7 +1029,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 10,
+      'weight' => 8,
     ),
   );
 

@@ -96,7 +96,7 @@ function urbancommons_ucommons_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '7',
+          'weight' => '11',
         ),
       ),
       'display' => array(),
