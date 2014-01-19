@@ -11,67 +11,77 @@ function urbancommons_ucommons_views_default_views() {
   $export = array();
 
   $view = new view();
-  $view->name = 'ucommons_map';
-  $view->description = 'Map displaying Urbancommons';
-  $view->tag = 'default';
+  $view->name = 'ucommons_map_allnodes';
+  $view->description = 'Provides a map of all locations_fields enabled nodes.';
+  $view->tag = 'getlocations view';
   $view->base_table = 'node';
-  $view->human_name = 'Ucommons Map';
+  $view->human_name = 'Ucommons map allnodes';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
-  /* Display: Master */
-  $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Map';
+  /* Display: Defaults */
+  $handler = $view->new_display('default', 'Defaults', 'default');
+  $handler->display->display_options['title'] = 'View all locations';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['query_comment'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['row_plugin'] = 'node';
+  $handler->display->display_options['row_plugin'] = 'fields';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Highlighted Media */
-  $handler->display->display_options['fields']['field_ucommons_highlighted_media']['id'] = 'field_ucommons_highlighted_media';
-  $handler->display->display_options['fields']['field_ucommons_highlighted_media']['table'] = 'field_data_field_ucommons_highlighted_media';
-  $handler->display->display_options['fields']['field_ucommons_highlighted_media']['field'] = 'field_ucommons_highlighted_media';
-  $handler->display->display_options['fields']['field_ucommons_highlighted_media']['label'] = '';
-  $handler->display->display_options['fields']['field_ucommons_highlighted_media']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_ucommons_highlighted_media']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_ucommons_highlighted_media']['type'] = 'file_rendered';
-  $handler->display->display_options['fields']['field_ucommons_highlighted_media']['settings'] = array(
-    'file_view_mode' => 'media_small',
-  );
-  /* Field: Content: Location */
-  $handler->display->display_options['fields']['field_ucommons_location']['id'] = 'field_ucommons_location';
-  $handler->display->display_options['fields']['field_ucommons_location']['table'] = 'field_data_field_ucommons_location';
-  $handler->display->display_options['fields']['field_ucommons_location']['field'] = 'field_ucommons_location';
-  $handler->display->display_options['fields']['field_ucommons_location']['label'] = '';
-  $handler->display->display_options['fields']['field_ucommons_location']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_ucommons_location']['click_sort_column'] = 'geom';
-  $handler->display->display_options['fields']['field_ucommons_location']['settings'] = array(
-    'data' => 'full',
-  );
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Getlocations Fields: Glid */
+  $handler->display->display_options['fields']['glid']['id'] = 'glid';
+  $handler->display->display_options['fields']['glid']['table'] = 'getlocations_fields';
+  $handler->display->display_options['fields']['glid']['field'] = 'glid';
+  $handler->display->display_options['fields']['glid']['label'] = '';
+  $handler->display->display_options['fields']['glid']['exclude'] = TRUE;
+  /* Field: Getlocations Fields: Latitude */
+  $handler->display->display_options['fields']['latitude']['id'] = 'latitude';
+  $handler->display->display_options['fields']['latitude']['table'] = 'getlocations_fields';
+  $handler->display->display_options['fields']['latitude']['field'] = 'latitude';
+  $handler->display->display_options['fields']['latitude']['label'] = '';
+  $handler->display->display_options['fields']['latitude']['exclude'] = TRUE;
+  /* Field: Getlocations Fields: Longitude */
+  $handler->display->display_options['fields']['longitude']['id'] = 'longitude';
+  $handler->display->display_options['fields']['longitude']['table'] = 'getlocations_fields';
+  $handler->display->display_options['fields']['longitude']['field'] = 'longitude';
+  $handler->display->display_options['fields']['longitude']['label'] = '';
+  $handler->display->display_options['fields']['longitude']['exclude'] = TRUE;
+  /* Field: Getlocations Fields: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'getlocations_fields';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['exclude'] = TRUE;
+  /* Field: Getlocations Fields: Marker */
+  $handler->display->display_options['fields']['marker']['id'] = 'marker';
+  $handler->display->display_options['fields']['marker']['table'] = 'getlocations_fields';
+  $handler->display->display_options['fields']['marker']['field'] = 'marker';
+  $handler->display->display_options['fields']['marker']['label'] = '';
+  $handler->display->display_options['fields']['marker']['exclude'] = TRUE;
+  /* Field: Getlocations Fields: Field name */
+  $handler->display->display_options['fields']['field_name']['id'] = 'field_name';
+  $handler->display->display_options['fields']['field_name']['table'] = 'getlocations_fields_entities';
+  $handler->display->display_options['fields']['field_name']['field'] = 'field_name';
+  $handler->display->display_options['fields']['field_name']['label'] = '';
+  $handler->display->display_options['fields']['field_name']['exclude'] = TRUE;
+  /* Field: Content: Type */
+  $handler->display->display_options['fields']['type']['id'] = 'type';
+  $handler->display->display_options['fields']['type']['table'] = 'node';
+  $handler->display->display_options['fields']['type']['field'] = 'type';
+  $handler->display->display_options['fields']['type']['label'] = '';
+  $handler->display->display_options['fields']['type']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['type']['machine_name'] = TRUE;
   /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -79,70 +89,110 @@ function urbancommons_ucommons_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'urbancommon' => 'urbancommon',
   );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Getlocations Fields: Glid */
+  $handler->display->display_options['filters']['glid']['id'] = 'glid';
+  $handler->display->display_options['filters']['glid']['table'] = 'getlocations_fields';
+  $handler->display->display_options['filters']['glid']['field'] = 'glid';
+  $handler->display->display_options['filters']['glid']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['glid']['group'] = 1;
+  /* Filter criterion: Getlocations Fields: Latitude */
+  $handler->display->display_options['filters']['latitude']['id'] = 'latitude';
+  $handler->display->display_options['filters']['latitude']['table'] = 'getlocations_fields';
+  $handler->display->display_options['filters']['latitude']['field'] = 'latitude';
+  $handler->display->display_options['filters']['latitude']['operator'] = '!=';
+  $handler->display->display_options['filters']['latitude']['value']['value'] = '0';
+  $handler->display->display_options['filters']['latitude']['group'] = 1;
+  /* Filter criterion: Getlocations Fields: Longitude */
+  $handler->display->display_options['filters']['longitude']['id'] = 'longitude';
+  $handler->display->display_options['filters']['longitude']['table'] = 'getlocations_fields';
+  $handler->display->display_options['filters']['longitude']['field'] = 'longitude';
+  $handler->display->display_options['filters']['longitude']['operator'] = '!=';
+  $handler->display->display_options['filters']['longitude']['value']['value'] = '0';
+  $handler->display->display_options['filters']['longitude']['group'] = 1;
+
+  /* Display: Block 3 */
+  $handler = $view->new_display('block', 'Block 3', 'block_3');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'getlocations';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  $handler->display->display_options['block_description'] = 'View: Getlocations allnodes map';
+
+  /* Display: Block 4 */
+  $handler = $view->new_display('block', 'Block 4', 'block_4');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'List all locations';
+  $handler->display->display_options['defaults']['use_ajax'] = FALSE;
+  $handler->display->display_options['use_ajax'] = TRUE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'mini';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['block_description'] = 'View: Getlocations allnodes list';
 
   /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'none';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler = $view->new_display('page', 'Page', 'page_1');
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'openlayers_map';
-  $handler->display->display_options['style_options']['map'] = 'ol_map_ucommons';
+  $handler->display->display_options['style_plugin'] = 'getlocations_leaflet';
+  $handler->display->display_options['style_options']['fullscreen'] = 1;
+  $handler->display->display_options['style_options']['category_method'] = '0';
+  $handler->display->display_options['style_options']['category_term_reference_field'] = 'field_tags';
+  $handler->display->display_options['style_options']['markercluster'] = 1;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['path'] = 'map';
-  $handler->display->display_options['menu']['type'] = 'normal';
-  $handler->display->display_options['menu']['title'] = 'Map';
-  $handler->display->display_options['menu']['name'] = 'main-menu';
 
-  /* Display: Feed */
-  $handler = $view->new_display('feed', 'Feed', 'feed');
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['style_plugin'] = 'rss';
-  $handler->display->display_options['row_plugin'] = 'node_rss';
-  $handler->display->display_options['path'] = 'ucommons-map.xml';
-  $handler->display->display_options['displays'] = array(
-    'default' => 'default',
-    'page' => 'page',
-  );
-
-  /* Display: OpenLayers Data Overlay */
-  $handler = $view->new_display('openlayers', 'OpenLayers Data Overlay', 'openlayers_1');
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page_2');
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'openlayers_data';
-  $handler->display->display_options['style_options']['data_source'] = array(
-    'value' => 'wkt',
-    'other_lat' => 'field_ucommons_location',
-    'other_lon' => 'field_ucommons_location',
-    'wkt' => 'field_ucommons_location',
-    'other_top' => 'title',
-    'other_right' => 'title',
-    'other_bottom' => 'title',
-    'other_left' => 'title',
-    'name_field' => 'title',
-    'description_field' => 'field_ucommons_highlighted_media',
-    'view_mode' => 'full',
-    'style_field' => '',
-  );
+  $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $translatables['ucommons_map'] = array(
-    t('Master'),
-    t('Map'),
+  $handler->display->display_options['path'] = 'map';
+  $translatables['ucommons_map_allnodes'] = array(
+    t('Defaults'),
+    t('View all locations'),
     t('more'),
     t('Apply'),
     t('Reset'),
     t('Sort by'),
     t('Asc'),
     t('Desc'),
+    t('Block 3'),
+    t('View: Getlocations allnodes map'),
+    t('Block 4'),
+    t('List all locations'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« first'),
+    t('‹ previous'),
+    t('next ›'),
+    t('last »'),
+    t('View: Getlocations allnodes list'),
     t('Page'),
-    t('Feed'),
-    t('OpenLayers Data Overlay'),
   );
-  $export['ucommons_map'] = $view;
+  $export['ucommons_map_allnodes'] = $view;
 
   return $export;
 }
