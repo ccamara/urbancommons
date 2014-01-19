@@ -109,15 +109,15 @@ function urbancommons_ucommons_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'ucommons_tags' => array(
-      'name' => 'Ucommons_tags',
-      'machine_name' => 'ucommons_tags',
-      'description' => 'Urban Commons\' tags',
+    'ucommons_promoter_type' => array(
+      'name' => 'Ucommons promoters\' type',
+      'machine_name' => 'ucommons_promoter_type',
+      'description' => 'Type of ucommons\' promoters',
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
       'language' => 'und',
-      'i18n_mode' => 4,
+      'i18n_mode' => 1,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -134,15 +134,15 @@ function urbancommons_ucommons_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'ucommons_type' => array(
-      'name' => 'Ucommons type',
-      'machine_name' => 'ucommons_type',
-      'description' => 'Type of ucommons',
+    'ucommons_tags' => array(
+      'name' => 'Ucommons_tags',
+      'machine_name' => 'ucommons_tags',
+      'description' => 'Urban Commons\' tags',
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
       'language' => 'und',
-      'i18n_mode' => 1,
+      'i18n_mode' => 4,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',

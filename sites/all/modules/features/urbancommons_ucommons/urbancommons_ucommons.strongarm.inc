@@ -698,14 +698,14 @@ function urbancommons_ucommons_strongarm() {
     ),
     'field_ucommons_beneficiaries' => array(
       'region' => 'right',
-      'weight' => '4',
+      'weight' => '3',
       'has_required' => FALSE,
       'title' => 'Beneficiaries',
       'hidden' => 0,
     ),
     'field_ucommons_category' => array(
       'region' => 'right',
-      'weight' => '2',
+      'weight' => '1',
       'has_required' => FALSE,
       'title' => 'Category',
       'hidden' => 0,
@@ -740,14 +740,14 @@ function urbancommons_ucommons_strongarm() {
     ),
     'field_ucommons_area_effect' => array(
       'region' => 'right',
-      'weight' => '3',
+      'weight' => '2',
       'has_required' => FALSE,
       'title' => 'Area of effect',
       'hidden' => 0,
     ),
     'field_ucommons_promoter' => array(
       'region' => 'right',
-      'weight' => '5',
+      'weight' => '4',
       'has_required' => FALSE,
       'title' => 'Promoter',
       'hidden' => 0,
@@ -759,11 +759,11 @@ function urbancommons_ucommons_strongarm() {
       'title' => 'Date',
       'hidden' => 0,
     ),
-    'field_ucommons_type' => array(
+    'field_ucommons_promoter_type' => array(
       'region' => 'right',
-      'weight' => '1',
+      'weight' => '5',
       'has_required' => FALSE,
-      'title' => 'Type',
+      'title' => 'Promoter&#039;s type',
       'hidden' => 0,
     ),
   );
