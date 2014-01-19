@@ -270,7 +270,7 @@ function urbancommons_ucommons_field_default_field_bases() {
   // Exported field_base: 'field_ucommons_location'
   $field_bases['field_ucommons_location'] = array(
     'active' => 1,
-    'cardinality' => -1,
+    'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_ucommons_location',
@@ -348,7 +348,7 @@ function urbancommons_ucommons_field_default_field_bases() {
       'input_name_required' => 4,
       'input_name_weight' => 0,
       'input_name_width' => 40,
-      'input_phone_required' => 0,
+      'input_phone_required' => 4,
       'input_phone_weight' => 0,
       'input_phone_width' => 20,
       'input_postal_code_required' => 0,

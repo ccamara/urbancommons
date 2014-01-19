@@ -293,11 +293,10 @@ function urbancommons_ucommons_strongarm() {
     'search_places_dd' => 0,
     'places' => 0,
     'node_map_marker' => 'webiconset-pins-24 pin2',
-    'user_map_marker' => 'webiconset-pins-24 pin1',
+    'user_map_marker' => 'webiconset-pins-24 pin2',
     'vocabulary_map_marker' => 'webiconset-pins-24 pin2',
-    'term_map_marker' => 'webiconset-pins-24 pin4',
-    'comment_map_marker' => 'drupal',
-    'input_map_marker' => 'webiconset-pins-24 pin3',
+    'term_map_marker' => 'webiconset-pins-24 pin2',
+    'input_map_marker' => 'webiconset-pins-24 pin2',
     'markeractiontype' => '1',
     'markeraction' => '2',
     'preload_data' => 0,
@@ -573,19 +572,8 @@ function urbancommons_ucommons_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'getlocations_term_marker';
   $strongarm->value = array(
-    'enable' => 1,
-    'vids' => array(
-      2 => '2',
-    ),
-    'vid' => array(
-      2 => array(
-        'term' => array(
-          1 => array(
-            'map_marker' => 'webiconset-pins-24 pin4',
-          ),
-        ),
-      ),
-    ),
+    'enable' => 0,
+    'vids' => 0,
     'max_depth' => '',
   );
   $export['getlocations_term_marker'] = $strongarm;
