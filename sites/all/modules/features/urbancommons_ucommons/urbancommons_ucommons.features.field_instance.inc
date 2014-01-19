@@ -160,9 +160,9 @@ function urbancommons_ucommons_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
+        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 7,
       ),
       'teaser' => array(
@@ -201,9 +201,9 @@ function urbancommons_ucommons_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
+        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 6,
       ),
       'teaser' => array(
@@ -241,15 +241,8 @@ function urbancommons_ucommons_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-        ),
-        'type' => 'date_default',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 21,
       ),
       'teaser' => array(
@@ -1189,9 +1182,9 @@ function urbancommons_ucommons_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
+        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 8,
       ),
       'teaser' => array(
