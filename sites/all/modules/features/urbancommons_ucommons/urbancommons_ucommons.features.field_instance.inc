@@ -37,20 +37,22 @@ function urbancommons_ucommons_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'body',
     'label' => 'Body',
-    'required' => FALSE,
+    'required' => 0,
     'settings' => array(
-      'display_summary' => TRUE,
+      'display_summary' => 1,
+      'entity_translation_sync' => FALSE,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
         'rows' => 20,
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -66,7 +68,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_url',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -91,6 +93,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
       'rel_remove' => 'default',
       'title' => 'value',
       'title_maxlength' => 128,
@@ -104,7 +107,7 @@ function urbancommons_ucommons_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -120,7 +123,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -134,6 +137,7 @@ function urbancommons_ucommons_field_default_field_instances() {
     'label' => 'Beneficiaries',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -144,7 +148,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -160,7 +164,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'inline',
@@ -175,6 +179,7 @@ function urbancommons_ucommons_field_default_field_instances() {
     'label' => 'Category',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -184,7 +189,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'apply_chosen' => 0,
       ),
       'type' => 'options_select',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -219,6 +224,7 @@ function urbancommons_ucommons_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'description_field' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => 'ucommons',
       'file_extensions' => 'jpg png gif',
       'max_filesize' => '',
@@ -243,7 +249,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -597,6 +603,7 @@ function urbancommons_ucommons_field_default_field_instances() {
     'label' => 'Leaflet map',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -604,7 +611,7 @@ function urbancommons_ucommons_field_default_field_instances() {
       'module' => 'getlocations_leaflet',
       'settings' => array(),
       'type' => 'getlocations_leaflet_map',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -838,6 +845,7 @@ function urbancommons_ucommons_field_default_field_instances() {
     'label' => 'Location',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -889,7 +897,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'use_country_dropdown' => 1,
       ),
       'type' => 'getlocations_fields',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -921,6 +929,7 @@ function urbancommons_ucommons_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'description_field' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => 'ucommons/media',
       'file_extensions' => 'jpg png gif pdf odt',
       'max_filesize' => '',
@@ -945,7 +954,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -960,7 +969,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'module' => 'relation_add',
         'settings' => array(),
         'type' => 'relation_add_endpoints_and_fields',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -974,6 +983,7 @@ function urbancommons_ucommons_field_default_field_instances() {
     'label' => 'Related',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'relation_type' => array(
         'related_urbancommon' => 'related_urbancommon',
       ),
@@ -989,7 +999,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'relation_endpoint_search_by_id' => 1,
       ),
       'type' => 'relation_add',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -1005,7 +1015,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1019,6 +1029,7 @@ function urbancommons_ucommons_field_default_field_instances() {
     'label' => 'Tags',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1029,7 +1040,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 

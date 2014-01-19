@@ -34,8 +34,10 @@ function urbancommons_ucommons_field_default_field_bases() {
     ),
     'locked' => 0,
     'module' => 'text',
-    'settings' => array(),
-    'translatable' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 1,
     'type' => 'text_with_summary',
   );
 
@@ -60,6 +62,7 @@ function urbancommons_ucommons_field_default_field_bases() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
       'title' => 'optional',
       'title_maxlength' => 128,
       'title_value' => '',
@@ -98,6 +101,8 @@ function urbancommons_ucommons_field_default_field_bases() {
           'parent' => 0,
         ),
       ),
+      'entity_translation_sync' => FALSE,
+      'options_list_callback' => 'i18n_taxonomy_allowed_values',
     ),
     'translatable' => 0,
     'type' => 'taxonomy_term_reference',
@@ -132,8 +137,10 @@ function urbancommons_ucommons_field_default_field_bases() {
           'parent' => 0,
         ),
       ),
+      'entity_translation_sync' => FALSE,
+      'options_list_callback' => 'i18n_taxonomy_allowed_values',
     ),
-    'translatable' => 0,
+    'translatable' => 1,
     'type' => 'taxonomy_term_reference',
   );
 
@@ -162,6 +169,9 @@ function urbancommons_ucommons_field_default_field_bases() {
     'settings' => array(
       'display_default' => 0,
       'display_field' => 0,
+      'entity_translation_sync' => array(
+        0 => 'fid',
+      ),
       'uri_scheme' => 'public',
     ),
     'translatable' => 0,
@@ -183,7 +193,9 @@ function urbancommons_ucommons_field_default_field_bases() {
     ),
     'locked' => 0,
     'module' => 'getlocations_leaflet',
-    'settings' => array(),
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+    ),
     'translatable' => 0,
     'type' => 'getlocations_leaflet',
   );
@@ -228,6 +240,7 @@ function urbancommons_ucommons_field_default_field_bases() {
       'controltype' => 'small',
       'country' => 'ES',
       'draggable' => 1,
+      'entity_translation_sync' => FALSE,
       'fullscreen' => 0,
       'geojson_data' => '',
       'geojson_enable' => 0,
@@ -412,6 +425,9 @@ function urbancommons_ucommons_field_default_field_bases() {
     'settings' => array(
       'display_default' => 0,
       'display_field' => 0,
+      'entity_translation_sync' => array(
+        0 => 'fid',
+      ),
       'uri_scheme' => 'public',
     ),
     'translatable' => 0,
@@ -429,7 +445,9 @@ function urbancommons_ucommons_field_default_field_bases() {
     'indexes' => array(),
     'locked' => 0,
     'module' => 'relation_add',
-    'settings' => array(),
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+    ),
     'translatable' => 0,
     'type' => 'relation_add',
   );
@@ -463,6 +481,8 @@ function urbancommons_ucommons_field_default_field_bases() {
           'parent' => 0,
         ),
       ),
+      'entity_translation_sync' => FALSE,
+      'options_list_callback' => 'i18n_taxonomy_allowed_values',
     ),
     'translatable' => 0,
     'type' => 'taxonomy_term_reference',
