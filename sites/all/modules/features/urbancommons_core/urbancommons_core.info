@@ -8,6 +8,7 @@ dependencies[] = chosen
 dependencies[] = ckeditor
 dependencies[] = ctools
 dependencies[] = diff
+dependencies[] = ds
 dependencies[] = features
 dependencies[] = file_entity
 dependencies[] = filter

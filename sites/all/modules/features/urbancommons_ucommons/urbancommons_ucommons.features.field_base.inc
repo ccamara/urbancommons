@@ -168,6 +168,26 @@ function urbancommons_ucommons_field_default_field_bases() {
     'type' => 'file',
   );
 
+  // Exported field_base: 'field_ucommons_leaflet_map'
+  $field_bases['field_ucommons_leaflet_map'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_ucommons_leaflet_map',
+    'foreign keys' => array(),
+    'indexes' => array(
+      'locative_field_name' => array(
+        0 => 'locative_field_name',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'getlocations_leaflet',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'getlocations_leaflet',
+  );
+
   // Exported field_base: 'field_ucommons_location'
   $field_bases['field_ucommons_location'] = array(
     'active' => 1,

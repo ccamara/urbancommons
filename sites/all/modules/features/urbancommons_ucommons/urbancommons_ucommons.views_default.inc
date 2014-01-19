@@ -12,8 +12,8 @@ function urbancommons_ucommons_views_default_views() {
 
   $view = new view();
   $view->name = 'ucommons_map_allnodes';
-  $view->description = 'Provides a map of all locations_fields enabled nodes.';
-  $view->tag = 'getlocations view';
+  $view->description = 'Provides a map of all ucommons nodes.';
+  $view->tag = 'ucommons, getlocations view';
   $view->base_table = 'node';
   $view->human_name = 'Ucommons map allnodes';
   $view->core = 7;
@@ -22,7 +22,7 @@ function urbancommons_ucommons_views_default_views() {
 
   /* Display: Defaults */
   $handler = $view->new_display('default', 'Defaults', 'default');
-  $handler->display->display_options['title'] = 'View all locations';
+  $handler->display->display_options['title'] = 'Map';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -118,79 +118,95 @@ function urbancommons_ucommons_views_default_views() {
   $handler->display->display_options['filters']['longitude']['value']['value'] = '0';
   $handler->display->display_options['filters']['longitude']['group'] = 1;
 
-  /* Display: Block 3 */
-  $handler = $view->new_display('block', 'Block 3', 'block_3');
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'getlocations';
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['defaults']['sorts'] = FALSE;
-  $handler->display->display_options['block_description'] = 'View: Getlocations allnodes map';
-
-  /* Display: Block 4 */
-  $handler = $view->new_display('block', 'Block 4', 'block_4');
-  $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'List all locations';
-  $handler->display->display_options['defaults']['use_ajax'] = FALSE;
-  $handler->display->display_options['use_ajax'] = TRUE;
-  $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'mini';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['pager']['options']['id'] = '0';
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['block_description'] = 'View: Getlocations allnodes list';
-
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page_1');
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'getlocations_leaflet';
+  $handler->display->display_options['style_options']['height'] = '500px';
+  $handler->display->display_options['style_options']['baselayers'] = array(
+    'OpenStreetMap.Mapnik' => 0,
+    'OpenStreetMap.BlackAndWhite' => 1,
+    'OpenStreetMap.DE' => 0,
+    'OpenStreetMap.HOT' => 1,
+    'Thunderforest.OpenCycleMap' => 1,
+    'Thunderforest.Transport' => 1,
+    'Thunderforest.Landscape' => 0,
+    'Thunderforest.Outdoors' => 0,
+    'MapQuestOpen.OSM' => 0,
+    'MapQuestOpen.Aerial' => 0,
+    'Stamen.Toner' => 0,
+    'Stamen.TonerBackground' => 0,
+    'Stamen.TonerHybrid' => 0,
+    'Stamen.TonerLines' => 0,
+    'Stamen.TonerLabels' => 0,
+    'Stamen.TonerLite' => 0,
+    'Stamen.Terrain' => 0,
+    'Stamen.TerrainBackground' => 0,
+    'Stamen.Watercolor' => 0,
+    'Esri.WorldStreetMap' => 0,
+    'Esri.DeLorme' => 0,
+    'Esri.WorldTopoMap' => 0,
+    'Esri.WorldImagery' => 0,
+    'Esri.WorldTerrain' => 0,
+    'Esri.WorldShadedRelief' => 0,
+    'Esri.WorldPhysical' => 0,
+    'Esri.OceanBasemap' => 0,
+    'Esri.NatGeoWorldMap' => 0,
+    'Esri.WorldGrayCanvas' => 0,
+    'Acetate.all' => 1,
+    'Acetate.basemap' => 0,
+    'Acetate.terrain' => 0,
+    'Acetate.foreground' => 0,
+    'Acetate.roads' => 0,
+    'Acetate.labels' => 0,
+    'Acetate.hillshading' => 0,
+    'OpenSeaMap' => 0,
+    'OpenWeatherMap.Clouds' => 0,
+    'OpenWeatherMap.CloudsClassic' => 0,
+    'OpenWeatherMap.Precipitation' => 0,
+    'OpenWeatherMap.PrecipitationClassic' => 0,
+    'OpenWeatherMap.Rain' => 0,
+    'OpenWeatherMap.RainClassic' => 0,
+    'OpenWeatherMap.Pressure' => 0,
+    'OpenWeatherMap.PressureContour' => 0,
+    'OpenWeatherMap.Wind' => 0,
+    'OpenWeatherMap.Temperature' => 0,
+    'OpenWeatherMap.Snow' => 0,
+  );
+  $handler->display->display_options['style_options']['term_map_marker'] = 'webiconset-pins-24 pin3';
   $handler->display->display_options['style_options']['fullscreen'] = 1;
   $handler->display->display_options['style_options']['category_method'] = '0';
   $handler->display->display_options['style_options']['category_term_reference_field'] = 'field_tags';
-  $handler->display->display_options['style_options']['markercluster'] = 1;
+  $handler->display->display_options['style_options']['layerControl'] = 1;
+  $handler->display->display_options['style_options']['default_baselayer'] = 'Acetate.all';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['path'] = 'map';
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page_2');
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['path'] = 'map';
+  /* Display: Feed */
+  $handler = $view->new_display('feed', 'Feed', 'feed_1');
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['style_plugin'] = 'rss';
+  $handler->display->display_options['row_plugin'] = 'node_rss';
+  $handler->display->display_options['path'] = 'map/feed';
+  $handler->display->display_options['displays'] = array(
+    'page_1' => 'page_1',
+    'default' => 0,
+    'block_3' => 0,
+    'block_4' => 0,
+  );
   $translatables['ucommons_map_allnodes'] = array(
     t('Defaults'),
-    t('View all locations'),
+    t('Map'),
     t('more'),
     t('Apply'),
     t('Reset'),
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('Block 3'),
-    t('View: Getlocations allnodes map'),
-    t('Block 4'),
-    t('List all locations'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('View: Getlocations allnodes list'),
     t('Page'),
+    t('Feed'),
   );
   $export['ucommons_map_allnodes'] = $view;
 
