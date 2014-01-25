@@ -124,7 +124,7 @@ function urbancommons_ucommons_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '14',
+          'weight' => '13',
         ),
         'language' => array(
           'weight' => '1',
@@ -752,6 +752,13 @@ function urbancommons_ucommons_strongarm() {
       'weight' => '5',
       'has_required' => FALSE,
       'title' => 'Promoter&#039;s type',
+      'hidden' => 0,
+    ),
+    'field_ucommons_managers' => array(
+      'region' => 'right',
+      'weight' => '15',
+      'has_required' => FALSE,
+      'title' => 'Managers',
       'hidden' => 0,
     ),
   );
