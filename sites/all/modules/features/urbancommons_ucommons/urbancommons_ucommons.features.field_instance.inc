@@ -123,7 +123,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 9,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -147,7 +147,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'apply_chosen' => 0,
       ),
       'type' => 'options_select',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -163,7 +163,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -204,7 +204,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'inline',
@@ -284,7 +284,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'year_range' => '-10:+0',
       ),
       'type' => 'date_select',
-      'weight' => 16,
+      'weight' => 17,
     ),
   );
 
@@ -706,7 +706,7 @@ function urbancommons_ucommons_field_default_field_instances() {
       'module' => 'getlocations_leaflet',
       'settings' => array(),
       'type' => 'getlocations_leaflet_map',
-      'weight' => 12,
+      'weight' => 13,
     ),
   );
 
@@ -927,7 +927,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 23,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1009,7 +1009,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 12,
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1034,7 +1034,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 15,
+      'weight' => 16,
     ),
   );
 
@@ -1107,7 +1107,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 10,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1132,7 +1132,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 14,
+      'weight' => 15,
     ),
   );
 
@@ -1148,7 +1148,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 11,
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1172,7 +1172,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'apply_chosen' => 0,
       ),
       'type' => 'options_select',
-      'weight' => 17,
+      'weight' => 18,
     ),
   );
 
@@ -1187,7 +1187,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'module' => 'relation_add',
         'settings' => array(),
         'type' => 'relation_add_endpoints_and_fields',
-        'weight' => 13,
+        'weight' => 14,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1217,7 +1217,47 @@ function urbancommons_ucommons_field_default_field_instances() {
         'relation_endpoint_search_by_id' => 1,
       ),
       'type' => 'relation_add',
-      'weight' => 10,
+      'weight' => 11,
+    ),
+  );
+
+  // Exported field_instance: 'node-urbancommon-field_ucommons_scale'
+  $field_instances['node-urbancommon-field_ucommons_scale'] = array(
+    'bundle' => 'urbancommon',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_ucommons_scale',
+    'label' => 'Scale',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => 0,
+      ),
+      'type' => 'options_select',
+      'weight' => 9,
     ),
   );
 
@@ -1233,7 +1273,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1258,7 +1298,7 @@ function urbancommons_ucommons_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -1278,6 +1318,7 @@ function urbancommons_ucommons_field_default_field_instances() {
   t('Promoter');
   t('Promoter\'s type');
   t('Related');
+  t('Scale');
   t('Tags');
 
   return $field_instances;

@@ -124,7 +124,7 @@ function urbancommons_ucommons_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '13',
+          'weight' => '14',
         ),
         'language' => array(
           'weight' => '1',
@@ -686,21 +686,21 @@ function urbancommons_ucommons_strongarm() {
     ),
     'field_ucommons_beneficiaries' => array(
       'region' => 'right',
-      'weight' => '3',
+      'weight' => '4',
       'has_required' => FALSE,
       'title' => 'Beneficiaries',
       'hidden' => 0,
     ),
     'field_ucommons_category' => array(
       'region' => 'right',
-      'weight' => '1',
+      'weight' => '2',
       'has_required' => FALSE,
       'title' => 'Category',
       'hidden' => 0,
     ),
     'field_ucommons_tags' => array(
       'region' => 'right',
-      'weight' => '6',
+      'weight' => '7',
       'has_required' => FALSE,
       'title' => 'Tags',
       'hidden' => 0,
@@ -728,14 +728,14 @@ function urbancommons_ucommons_strongarm() {
     ),
     'field_ucommons_area_effect' => array(
       'region' => 'right',
-      'weight' => '2',
+      'weight' => '3',
       'has_required' => FALSE,
       'title' => 'Area of effect',
       'hidden' => 0,
     ),
     'field_ucommons_promoter' => array(
       'region' => 'right',
-      'weight' => '4',
+      'weight' => '5',
       'has_required' => FALSE,
       'title' => 'Promoter',
       'hidden' => 0,
@@ -749,16 +749,23 @@ function urbancommons_ucommons_strongarm() {
     ),
     'field_ucommons_promoter_type' => array(
       'region' => 'right',
-      'weight' => '5',
+      'weight' => '6',
       'has_required' => FALSE,
       'title' => 'Promoter&#039;s type',
       'hidden' => 0,
     ),
     'field_ucommons_managers' => array(
       'region' => 'right',
-      'weight' => '15',
+      'weight' => '8',
       'has_required' => FALSE,
       'title' => 'Managers',
+      'hidden' => 0,
+    ),
+    'field_ucommons_scale' => array(
+      'region' => 'right',
+      'weight' => '1',
+      'has_required' => FALSE,
+      'title' => 'Scale',
       'hidden' => 0,
     ),
   );
