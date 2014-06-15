@@ -46,8 +46,8 @@ function urbancommons_ucommons_ds_layout_settings_info() {
       'left' => array(
         0 => 'field_ucommons_highlighted_media',
         1 => 'body',
-        2 => 'field_ucommons_media',
-        3 => 'field_ucommons_leaflet_map',
+        2 => 'field_ucommons_leaflet_map',
+        3 => 'field_ucommons_media',
       ),
       'right' => array(
         4 => 'field_link',
@@ -66,8 +66,8 @@ function urbancommons_ucommons_ds_layout_settings_info() {
     'fields' => array(
       'field_ucommons_highlighted_media' => 'left',
       'body' => 'left',
-      'field_ucommons_media' => 'left',
       'field_ucommons_leaflet_map' => 'left',
+      'field_ucommons_media' => 'left',
       'field_link' => 'right',
       'field_ucommons_date' => 'right',
       'field_ucommons_scale' => 'right',

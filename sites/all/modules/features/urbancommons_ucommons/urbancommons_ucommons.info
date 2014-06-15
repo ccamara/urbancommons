@@ -17,6 +17,7 @@ dependencies[] = nodeformcols
 dependencies[] = relation_add
 dependencies[] = strongarm
 dependencies[] = views
+dependencies[] = views_data_export
 features[ctools][] = ds:ds:1
 features[ctools][] = field_group:field_group:1
 features[ctools][] = openlayers:openlayers_maps:1
