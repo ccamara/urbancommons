@@ -79,7 +79,9 @@ function urbancommons_core_ckeditor_profile_defaults() {
           ),
         ),
       ),
-      'input_formats' => array(),
+      'input_formats' => array(
+        'filtered_html' => 'Filtered HTML',
+      ),
     ),
     'Basic' => array(
       'name' => 'Basic',
